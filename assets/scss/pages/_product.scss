@@ -1,0 +1,97 @@
+.product-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -4px;
+  margin-left: -4px;
+}
+.product-col {
+  width: calc(100% / 12 * 6);
+  padding-right: 4px;
+  padding-left: 4px;
+}
+
+/* 產品描述 */
+.del-price {
+  color: $neutral-500;
+  padding-left: 8px;
+  vertical-align: middle;
+}
+
+.product-color {
+  width: 64px;
+  padding: 0;
+  text-align: center;
+  color: $neutral-600;
+}
+
+.btn-product-size {
+  border: 1px solid $neutral-300;
+  width: 160px;
+  &.selected {
+    border: 1px solid $neutral-900;
+  }
+
+  &:hover {
+    border: 1px solid $neutral-600;
+    transition: 0.4s;
+  }
+  &:disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+}
+
+.product-action {
+  display: flex;
+  gap: 8px;
+  .btn {
+    width: 50%;
+  }
+}
+
+@media (max-width:767px) {
+  .product-action .btn {
+    width: 100%;
+  }
+}
+
+.product-action .bi {
+  font-size: 20px;
+  padding-right: 8px;
+}
+
+.btn-heart {
+  border-radius: 4px;
+  padding: 12px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+.btn-heart .bi {
+  font-size: 24px;
+  padding: 0;
+}
+
+.product-info-title {
+  font-weight: 500;
+}
+
+.product-info-item {
+  border-bottom: 1px solid $neutral-300;
+  p {
+    color: $neutral-600;
+  }
+}
+
+@media (max-width:767px) {
+  .product-wrapper {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+  .product-wrapper .col-3{
+    min-width: 300px; 
+    flex: 0 0 auto;
+    padding-left: 0;
+    padding-right: 16px;
+  }
+}
